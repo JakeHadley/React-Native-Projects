@@ -6,7 +6,7 @@ import AlbumDetail from './AlbumDetail';
 class AlbumList extends Component {
   state = { albums: [] };
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
       .then(response => this.setState({ albums: response.data }));
   }
@@ -18,8 +18,6 @@ class AlbumList extends Component {
   }
 
   render() {
-    console.log(this.state);
-
     return (
       <ScrollView>
         {this.renderAlbums()}
