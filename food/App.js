@@ -8,7 +8,15 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Search'>
+      <Stack.Navigator 
+      initialRouteName='Search'
+      screenOptions={{
+        title: 'here',
+        cardStyle: {
+          backgroundColor: 'white'
+        }
+      }}
+      >
         <Stack.Screen name='Search' component={SearchScreen} />
       </Stack.Navigator>
     </NavigationContainer>
