@@ -1,19 +1,39 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
-const SearchBar = () => {
-  return (
-    <View style={styles.background}>
-      <Text>Search Screen</Text>
-    </View>
-  );
-};
+const SearchBar = ({ term, onTermChange, onTermSubmit }) => (
+  <View style={styles.backgroundStyle}>
+    <Icon name='search' style={styles.iconStyle} />
+    <TextInput
+      placeholder='search'
+      style={styles.inputStyle}
+      value={term}
+      onChangeText={onTermChange}
+      onEndEditing={onTermSubmit}
+      autoCapitalize='none'
+      autoCorrect={false}
+    />
+  </View>
+);
 
 const styles = StyleSheet.create({
-  background: {
+  backgroundStyle: {
     backgroundColor: '#F0EEEE',
     height: 50,
     borderRadius: 5,
+    marginHorizontal: 15,
+    marginTop: 15,
+    marginBottom: 10,
+    flexDirection: 'row'
+  },
+  inputStyle: {
+    flex: 1,
+    fontSize: 18
+  },
+  iconStyle: {
+    fontSize: 35,
+    alignSelf: 'center',
     marginHorizontal: 15
   }
 });
