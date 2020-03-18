@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react';
 
+//generic reusable function that creates a context for some piece of state. 
+//much like having multiple reducers for redux
 export default (reducer, actions, initialState) => {
   const Context = React.createContext();
 

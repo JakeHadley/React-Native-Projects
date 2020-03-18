@@ -1,0 +1,29 @@
+{
+  "blogposts": [
+    {
+      "title": "API Post",
+      "id": 1,
+      "content": "Content for post"
+    },
+    {
+      "title": "Asfa",
+      "content": "sdfdf",
+      "id": 2
+    },
+    {
+      "title": "Saasdff",
+      "content": "Fsdfwef",
+      "id": 3
+    },
+    {
+      "title": "Sdafsds",
+      "content": "Sdfsss",
+      "id": 4
+    },
+    {
+      "title": "5sdfsdf",
+      "content": "Sdfs",
+      "id": 6
+    }
+  ]
+}
